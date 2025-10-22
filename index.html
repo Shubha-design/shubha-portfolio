@@ -5,116 +5,92 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shubha V - Professional Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <style>
-/* Reset & Fonts */
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; scroll-behavior:smooth; }
+/* Global Styles */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
 body { background:#0d1117; color:#e6e6e6; line-height:1.6; }
-
-/* Navigation */
-nav { position:sticky; top:0; background:#1c1c1e; display:flex; justify-content:center; gap:2rem; padding:1rem; border-bottom:3px solid #6f42c1; z-index:1000; }
-nav a { color:#6f42c1; text-decoration:none; font-weight:bold; transition:0.3s; }
-nav a:hover { color:#9b59b6; }
+a { text-decoration:none; }
 
 /* Header */
-header { text-align:center; padding:4rem 1rem; }
-header img { width:160px; height:160px; border-radius:50%; border:4px solid #6f42c1; margin:0 auto 1rem auto; display:block; }
-header h1 { font-size:2.5rem; color:#6f42c1; margin-bottom:0.5rem; }
+header { text-align:center; padding:2.5rem 1rem; background:#1c1c1e; border-bottom:3px solid #6f42c1; }
+header img { width:150px; height:150px; border-radius:50%; border:4px solid #6f42c1; display:block; margin:0 auto 1rem auto; }
+header h1 { font-size:2.2rem; color:#6f42c1; margin-bottom:0.5rem; }
 header p { font-size:1.1rem; color:#b0b0b0; margin-bottom:1rem; }
-.social-links a { text-decoration:none; color:#6f42c1; margin:0 12px; font-weight:bold; transition:0.3s; }
-.social-links a:hover { color:#9b59b6; }
+header .social-links a { margin:0 10px; font-weight:bold; color:#6f42c1; transition:0.3s; }
+header .social-links a:hover { color:#9b59b6; }
 
-/* Sections */
-section { padding:3rem 1rem; max-width:900px; margin:auto; }
-section h2 { color:#6f42c1; text-align:center; margin-bottom:2rem; font-size:2rem; }
-
-/* Info Cards */
-.info { display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; }
-.card { background:#1c1c1e; padding:1.8rem; border-radius:15px; box-shadow:0 8px 20px rgba(111,66,193,0.3); flex:1 1 260px; text-align:center; transition:transform 0.3s, box-shadow 0.3s; }
-.card:hover { transform:translateY(-8px); box-shadow:0 12px 25px rgba(111,66,193,0.6); }
-
-/* Buttons */
-.card a.button { display:inline-block; margin-top:15px; padding:12px 25px; background:#6f42c1; color:#fff; border-radius:10px; text-decoration:none; font-weight:bold; transition:0.3s; }
-.card a.button:hover { background:#9b59b6; transform:translateY(-3px); }
+/* Section */
+section { padding:2rem 1rem; max-width:900px; margin:auto; }
+section h2 { color:#6f42c1; text-align:center; margin-bottom:1.2rem; }
 
 /* About Me Box */
-.about-box { max-width:720px; margin:0 auto; text-align:justify; background: rgba(111,66,193,0.05); padding:1.8rem; border-radius:15px; }
+.about-box {
+  max-width:720px;
+  margin:0 auto 1.5rem auto;
+  text-align:justify;
+  background: rgba(111,66,193,0.05);
+  padding:1.5rem;
+  border-radius:15px;
+}
 
-/* Skills Badges */
-.skill-badge { display:inline-block; margin:5px; padding:8px 15px; border-radius:20px; background:#6f42c1; color:#fff; font-weight:bold; }
+/* Info Cards (Skills, Internship, Projects, Certificates) */
+.info { display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:center; }
+.card { background:#1c1c1e; padding:1.5rem; border-radius:15px; box-shadow:0 8px 20px rgba(111,66,193,0.3); flex:1 1 250px; text-align:center; transition:transform 0.3s, box-shadow 0.3s; }
+.card:hover { transform:translateY(-8px); box-shadow:0 12px 25px rgba(111,66,193,0.6); }
+.card a.button { display:inline-block; margin-top:10px; padding:10px 20px; background:#6f42c1; color:#fff; border-radius:10px; font-weight:bold; transition:0.3s; }
+.card a.button:hover { background:#9b59b6; }
 
 /* Footer */
-footer { text-align:center; padding:2rem 1rem; background:#1c1c1e; color:#6f42c1; margin-top:2rem; font-size:0.95rem; }
-footer a { color:#6f42c1; margin:0 8px; transition:0.3s; }
-footer a:hover { color:#9b59b6; }
-
-/* Responsive */
-@media(max-width:768px){
-    header img { width:130px; height:130px; }
-    .card { flex:1 1 100%; }
-    nav { flex-wrap:wrap; gap:1rem; }
-}
+footer { text-align:center; padding:2rem 1rem; background:#1c1c1e; color:#6f42c1; margin-top:2rem; }
+footer .footer-button { display:inline-block; margin:5px 10px; padding:8px 15px; background:#6f42c1; color:#fff; border-radius:8px; font-weight:bold; transition:0.3s; }
+footer .footer-button:hover { background:#9b59b6; transform:translateY(-2px); }
+p, strong { color:#b0b0b0; }
+strong { color:#e6e6e6; }
 </style>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#internship">Internship</a>
-<a href="#projects">Projects</a>
-<a href="#certificates">Certificates</a>
-<a href="#resume">Resume</a>
-<a href="#contact">Contact</a>
-</nav>
 
 <!-- Header -->
 <header>
 <img src="profile.jpg" alt="Shubha V Profile Photo">
 <h1>Shubha V</h1>
-<p>7th Semester, Information Science Engineering<br>Sri Siddhartha Institute of Technology</p>
+<p>7th Semester, Information Science Engineering <br> Sri Siddhartha Institute of Technology</p>
 <div class="social-links">
   <a href="https://www.linkedin.com/in/shubha-v-1b229b362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
   <a href="https://github.com/Shubha-design" target="_blank"><i class="fab fa-github"></i> GitHub</a>
   <a href="mailto:vshubha59@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-  <a href="tel:+919740047048"><i class="fas fa-phone"></i> Phone</a>
+  <a href="tel:+919740047048"><i class="fas fa-phone"></i> +91 9740047048</a>
 </div>
 </header>
 
 <!-- About Me -->
 <section id="about">
-<h2>About Me</h2>
-<div class="about-box">
-<p>Hello! I’m <strong>Shubha V</strong>, a 7th Semester Information Science Engineering student at <strong>Sri Siddhartha Institute of Technology</strong>. I am passionate about exploring cutting-edge technologies and building innovative solutions that have a meaningful impact.</p>
-<p>My expertise includes <strong>Python programming, Machine Learning, and Web Development</strong>, and I enjoy transforming ideas into practical, real-world projects. I focus on writing clean, efficient code and designing solutions that are both functional and user-friendly.</p>
-<p>From developing intelligent AI models to creating responsive websites, I thrive on challenges that allow me to learn continuously and grow professionally. <strong>Learning, coding, and problem-solving are my true passions</strong>, and I aim to contribute to technology in ways that make a difference.</p>
-</div>
+  <h2>About Me</h2>
+  <div class="about-box">
+    <p>Hello! I’m <strong>Shubha V</strong>, a 7th Semester Information Science Engineering student at <strong>Sri Siddhartha Institute of Technology</strong>. I am passionate about exploring cutting-edge technologies and building innovative solutions that have a meaningful impact.</p>
+    <p>My expertise includes <strong>Python programming, Machine Learning, and Web Development</strong>, and I enjoy transforming ideas into practical, real-world projects. I focus on writing clean, efficient code and designing solutions that are both functional and user-friendly.</p>
+    <p>From developing intelligent AI models to creating responsive websites, I thrive on challenges that allow me to learn continuously and grow professionally. <strong>Learning, coding, and problem-solving are my true passions</strong>, and I aim to contribute to technology in ways that make a difference.</p>
+  </div>
 </section>
 
-<!-- Skills -->
+<!-- Skills & Courses -->
 <section id="skills">
 <h2>Skills & Courses</h2>
 <div class="info">
-<div class="card">
-<h3>Python Programming</h3>
-<p>Proficient in Python for projects, data analysis, and scripting.</p>
-<span class="skill-badge">Python</span>
-<span class="skill-badge">Data Analysis</span>
-</div>
-<div class="card">
-<h3>Machine Learning</h3>
-<p>Built AI models for stress detection, wine prediction, and crop price forecasting.</p>
-<span class="skill-badge">ML</span>
-<span class="skill-badge">AI</span>
-</div>
-<div class="card">
-<h3>Web Development</h3>
-<p>Experienced in HTML, CSS, JavaScript, and building responsive websites.</p>
-<span class="skill-badge">HTML</span>
-<span class="skill-badge">CSS</span>
-<span class="skill-badge">JavaScript</span>
-</div>
+  <div class="card">
+    <h3>Python Programming</h3>
+    <p>Proficient in Python for projects, data analysis, and scripting.</p>
+  </div>
+  <div class="card">
+    <h3>Machine Learning</h3>
+    <p>Built AI models for stress detection, wine prediction, and crop price forecasting.</p>
+  </div>
+  <div class="card">
+    <h3>Web Development</h3>
+    <p>Experienced in HTML, CSS, JavaScript, and building responsive websites.</p>
+  </div>
 </div>
 </section>
 
@@ -122,12 +98,12 @@ footer a:hover { color:#9b59b6; }
 <section id="internship">
 <h2>Internship</h2>
 <div class="info">
-<div class="card">
-<h3>Python Programming Intern</h3>
-<p>Vaultofcodes – 2 Months</p>
-<p>Gained hands-on experience in Python programming, worked on real-time projects, and enhanced problem-solving skills.</p>
-<a href="CERTIFICATE.pdf" target="_blank" class="button">View Certificate</a>
-</div>
+  <div class="card">
+    <h3>Python Programming Intern</h3>
+    <p>Vaultofcodes – 2 Months</p>
+    <p>Gained hands-on experience in Python programming, worked on real-time projects, and enhanced problem-solving skills.</p>
+    <a href="CERTIFICATE.pdf" target="_blank" class="button">View Certificate</a>
+  </div>
 </div>
 </section>
 
@@ -135,21 +111,18 @@ footer a:hover { color:#9b59b6; }
 <section id="projects">
 <h2>Projects</h2>
 <div class="info">
-<div class="card">
-<h3>MindSense: AI Stress Tracker</h3>
-<p>Detects stress levels in real-time using facial expressions and physiological signals. Helps improve mental health awareness and management.</p>
-<a href="#" class="button">View on GitHub</a>
-</div>
-<div class="card">
-<h3>VinoVision: Smart Wine Quality Predictor</h3>
-<p>Predicts wine quality using chemical properties and AI models. Assists winemakers in enhancing product consistency and quality.</p>
-<a href="#" class="button">View on GitHub</a>
-</div>
-<div class="card">
-<h3>AgriForecast: Intelligent Crop Price Predictor</h3>
-<p>Forecasts crop prices using historical data and AI analysis. Supports farmers in making informed market decisions.</p>
-<a href="#" class="button">View on GitHub</a>
-</div>
+  <div class="card">
+    <h3>MindSense: AI Stress Tracker</h3>
+    <p>Detects stress levels in real-time using facial expressions and physiological signals. Helps improve mental health awareness and management.</p>
+  </div>
+  <div class="card">
+    <h3>VinoVision: Smart Wine Quality Predictor</h3>
+    <p>Predicts wine quality using chemical properties and AI models. Assists winemakers in enhancing product consistency and quality.</p>
+  </div>
+  <div class="card">
+    <h3>AgriForecast: Intelligent Crop Price Predictor</h3>
+    <p>Forecasts crop prices using historical data and AI analysis. Supports farmers in making informed market decisions.</p>
+  </div>
 </div>
 </section>
 
@@ -184,20 +157,29 @@ footer a:hover { color:#9b59b6; }
 
 <!-- Contact -->
 <section id="contact">
-<h2>Contact</h2>
+<h2>Contact Me</h2>
 <p style="text-align:center; margin-bottom:1.5rem;">
-Feel free to reach out for collaborations, internships, or professional opportunities. I’m always open to connecting!
+I am open to professional opportunities, collaborations, and internships. Feel free to reach out through the channels below.
 </p>
 <div style="text-align:center; font-size:1.1rem;">
-  <p><strong>Email:</strong> <a href="mailto:vshubha59@gmail.com" class="button">vshubha59@gmail.com</a></p>
-  <p><strong>Phone:</strong> <a href="tel:+919740047048" class="button">+91 9740047048</a></p>
-  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shubha-v-1b229b362" target="_blank" class="button">Visit Profile</a></p>
-  <p><strong>GitHub:</strong> <a href="https://github.com/Shubha-design" target="_blank" class="button">View Projects</a></p>
+  <p>Email: <a href="mailto:vshubha59@gmail.com" class="button">vshubha59@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/shubha-v-1b229b362" target="_blank" class="button">Visit My Profile</a></p>
+  <p>GitHub: <a href="https://github.com/Shubha-design" target="_blank" class="button">View Projects</a></p>
 </div>
 </section>
+
 <!-- Footer -->
 <footer>
-&copy; 2025 Shubha V. All rights reserved.
+  <p>&copy; 2025 Shubha V. All rights reserved.</p>
+  <div style="margin-top:1rem; text-align:center;">
+    <a href="https://www.linkedin.com/in/shubha-v-1b229b362" target="_blank" class="footer-button"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://github.com/Shubha-design" target="_blank" class="footer-button"><i class="fab fa-github"></i> GitHub</a>
+    <a href="mailto:vshubha59@gmail.com" class="footer-button"><i class="fas fa-envelope"></i> Email</a>
+  </div>
+  <p style="margin-top:0.5rem; font-size:0.9rem; color:#b0b0b0;">
+    Designed & Developed by Shubha V. Built using HTML, CSS, hosted on GitHub Pages.
+  </p>
 </footer>
+
 </body>
 </html>
